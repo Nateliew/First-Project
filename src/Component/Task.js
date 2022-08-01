@@ -68,6 +68,7 @@ export default class Task extends Component {
     }
   };
 
+  //upon loading page, get the list of tasks and parse it
   componentDidMount() {
     console.log(localStorage.getItem("data"));
     let data =
@@ -81,9 +82,26 @@ export default class Task extends Component {
     } else {
       alert("You have unfinished tasks!");
       this.setState({ allTasks: data });
+
+      // //future reminder functions:
+      //       function test(arr) {
+      //         const firstItem = arr[0];
+      //         const firstItemKeys = Object.keys(firstItem);
+
+      //         for (let i = 0; i < firstItemKeys.length; i++) {
+      //           for (let j = 0; j < arr.length; j++) {
+      //             for (let x in arr[j]) {
+      //               if (arr[j][x] !== firstItem[firstItemKeys[i]]) return false;
+      //             }
+      //           }
+      //         }
+
+      //         return true;
+      //       }
     }
   }
 
+  //change page
   continue = (e) => {
     e.preventDefault();
     this.props.back();
@@ -108,6 +126,7 @@ export default class Task extends Component {
     } else localStorage.setItem("data", JSON.stringify(updatedList));
   }
 
+  //checkbox function
   handleCheck = (e, item) => {
     const allTasks = [...this.state.allTasks];
     //if the checkbox is clicked, the item will be marked as completed ("true"), else false
@@ -176,6 +195,7 @@ export default class Task extends Component {
                       <div
                         key={index}
                         className={
+                          //apply CSS based on completed status
                           item.currTasks.status ? "completed" : "incomplete"
                         }
                       >
