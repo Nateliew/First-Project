@@ -84,20 +84,25 @@ export default class Task extends Component {
       this.setState({ allTasks: data });
 
       // //future reminder functions:
-      //       function test(arr) {
-      //         const firstItem = arr[0];
-      //         const firstItemKeys = Object.keys(firstItem);
-
-      //         for (let i = 0; i < firstItemKeys.length; i++) {
-      //           for (let j = 0; j < arr.length; j++) {
-      //             for (let x in arr[j]) {
-      //               if (arr[j][x] !== firstItem[firstItemKeys[i]]) return false;
-      //             }
-      //           }
-      //         }
-
-      //         return true;
-      //       }
+      // function areEquals(a, b) {
+      //   var keys1 = Object.keys(a);
+      //   var keys2 = Object.keys(b);
+      //   if (keys1.length !== keys2.length) {
+      //     return false;
+      //   }
+      //   for (this.state.currTasks.status in a) {
+      //     if (a[this.state.currTasks.status] !== b[this.state.currTasks.status])
+      //       return false;
+      //   }
+      //   return true;
+      // }
+      // function checkArray(arr) {
+      //   for (var i = 1; i < arr.length; i++) {
+      //     if (!areEquals(arr[0], arr[i])) return false;
+      //   }
+      //   alert("You have unfinished tasks!");
+      //   return true;
+      // }
     }
   }
 
