@@ -1,0 +1,59 @@
+body {
+  background-color: #d7ccc8;
+  text-align: center;
+}
+
+.taskInput input {
+  background-color: #bcaaa4;
+  width: 10rem;
+  height: 2rem;
+}
+
+input[type="submit"] {
+  background-color: #bcaaa4;
+  width: 5rem;
+  height: 1.5rem;
+}
+
+.output {
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+}
+.completed {
+  text-decoration: line-through;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0 20px 0;
+  border-bottom: 1px #bcaaa4 solid;
+}
+
+.listings {
+  display: flex;
+  flex-direction: column;
+}
+
+.incomplete {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0 20px 0;
+  border-bottom: 1px #bcaaa4 solid;
+}
+
+.box {
+  padding-top: 2em;
+  background-color: #bcaaa4;
+  width: 500px;
+  height: min-content;
+  border-radius: 5px;
+  padding: 20px;
+  box-shadow: 10px 10px 26px 0px rgba(0, 0, 0, 0.35);
+  margin-left: 500px;
+  align-items: center;
+}
+.tr.spacer > td {
+  border: none;
+  padding: 0;
+}
